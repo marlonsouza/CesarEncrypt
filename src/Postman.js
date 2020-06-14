@@ -13,7 +13,8 @@ class Postman {
 
     try {
       const response = await axios.get(url);
-      State.saveContent(response.data);
+
+      State.saveContent(response.data, 'Postman');
     } catch (error) {
       console.log("Error: ");
       console.log(error);

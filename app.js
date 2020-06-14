@@ -8,11 +8,11 @@ class App{
     this.challenge();
   }
 
-  challenge(){
-    Postman.getAnswer();
+  async challenge(){
+    await Postman.getAnswer();
     Cesar.decode();
     Cryptor.encrypt();
-    Postman.sendResolution();
+    await Postman.sendResolution();
   }
 }
 

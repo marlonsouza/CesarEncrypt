@@ -15,7 +15,7 @@ class Cryptor {
     console.log("Encrypted: ");
     console.log(answer.resumo_criptografico);
 
-    State.saveContent(answer);
+    State.saveContent(answer, 'Cryptor');
   }
 }
 

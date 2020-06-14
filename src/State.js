@@ -6,12 +6,12 @@ const AnswerFilePath = path.resolve(DataPath, 'answer.json');
 
 class State{
 
-  saveContent(content){
+  saveContent(content, whoCalling){
     this.lastUpdate = new Date();
 
     const contentString = JSON.stringify(content);
 
-    console.log(`Saving answer: ${contentString}`);
+    console.log(`${whoCalling} - Saving answer: ${contentString}`);
 
     return fs.writeFileSync(AnswerFilePath, contentString);
   }

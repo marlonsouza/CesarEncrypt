@@ -11,9 +11,9 @@ class Cesar {
       if (letter.match(/^[A-Za-z]+$/)) {
         const applyDecode = (codeLetter, plus) => {
           const cl =
-            codeLetter === "z".charCodeAt() ? "a".charCodeAt() : codeLetter + 1;
+            codeLetter === "a".charCodeAt() ? "z".charCodeAt() : codeLetter - 1;
 
-          if (plus < 2) 
+          if (plus < answer.numero_casas - 1) 
             return applyDecode(cl, ++plus);
           else
             return cl;
@@ -33,7 +33,7 @@ class Cesar {
 
     console.log(`Decoded: ${answer.decifrado}`);
 
-    State.saveContent(answer);
+    State.saveContent(answer, 'Cesar');
   }
 }
 
