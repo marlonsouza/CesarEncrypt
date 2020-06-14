@@ -5,10 +5,10 @@ import Cryptor from './src/Cryptor';
 
 class App{
   constructor(){
-    this.challange();
+    this.challenge();
   }
 
-  challange(){
+  challenge(){
     Postman.getAnswer();
     Cesar.decode();
     Cryptor.encrypt();
